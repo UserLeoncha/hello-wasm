@@ -16,7 +16,7 @@ public:
     };
 
 private:
-    Quadtree* createnode();
+    void createnode(Quadtree *rootnode);
 
     node* rootnode;
 

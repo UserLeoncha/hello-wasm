@@ -8,7 +8,8 @@ Quadtree::Quadtree() {
     node4 = nullptr;
 }
 
-Quadtree *Quadtree::createnode(Quadtree *root)
+void Quadtree::createnode(Quadtree *root)
 {
-
+    root->rootnode = nullptr;
+    return;
 }
