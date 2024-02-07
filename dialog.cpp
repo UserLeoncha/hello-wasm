@@ -14,19 +14,20 @@ Dialog::Dialog(QWidget *parent)
     connect(button3, &QPushButton::clicked, this, &Dialog::stepbystep);
 
     //setting layout
-    layout->addStretch(1);
-    layout->addWidget(button1);
-    layout->addStretch(1);
-    layout->addWidget(button2);
-    layout->addStretch(1);
-    layout->addWidget(button3);
-    layout->addStretch(1);
-    layout->addWidget(label1);
-    layout->addStretch(1);
-    layout->addWidget(label2);
-    layout->addStretch(1);
+    vlayout->addStretch(1);
+    vlayout->addWidget(button1);
+    vlayout->addStretch(1);
+    vlayout->addWidget(button2);
+    vlayout->addStretch(1);
+    vlayout->addWidget(button3);
+    vlayout->addStretch(1);
 
-    this->setLayout(layout);
+    hlayout->addWidget(label1);
+    hlayout->addStretch(1);
+    hlayout->addWidget(label2);
+    vlayout->addLayout(hlayout);
+
+    this->setLayout(vlayout);
 }
 
 Dialog::~Dialog() {
@@ -53,6 +54,7 @@ void Dialog::openpic()
             return;
         }
         label1->setPixmap(QPixmap::fromImage(*img));
+        label2->setPixmap(QPixmap::fromImage(*img));
     }
 }
 

@@ -10,5 +10,5 @@ Quadtree::Quadtree() {
 
 Quadtree *Quadtree::createnode(Quadtree *root)
 {
-
+    root->rootnode = nullptr;
 }

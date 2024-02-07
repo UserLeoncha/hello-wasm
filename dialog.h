@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QMessageBox>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QImage>
 #include <QPixmap>
 #include <QLabel>
@@ -19,7 +20,8 @@ public:
     ~Dialog();
 private:
     //factors
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    QVBoxLayout *vlayout = new QVBoxLayout(this);
+    QHBoxLayout *hlayout = new QHBoxLayout(this);
     QPushButton *button1 = new QPushButton("open picture");
     QPushButton *button2 = new QPushButton("get quatree picture");
     QPushButton *button3 = new QPushButton("step by step");
